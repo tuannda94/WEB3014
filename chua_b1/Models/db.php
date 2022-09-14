@@ -6,7 +6,7 @@ define('NOT_FETCH', 0);
 
 function getConnect() {
     $connect = new PDO(
-        'mysql:host=127.0.0.1;dbname=PHP2_WE17202',
+        'mysql:host=127.0.0.1;dbname=php2_we17202',
         'root',
         ''
     );
