@@ -19,13 +19,12 @@ function addTour()
         $name = $_POST['name'];
         $file = $_FILES['image'];
         $image = $file['name'];
-
         $intro = $_POST['intro'];
         $description = $_POST['description'];
         $number_date = $_POST['number_date'];
         $price = $_POST['price'];
         $category_id = $_POST['category_id'];
-        move_uploaded_file($file['tmp_name'], '../img/' . $image);
+        move_uploaded_file($file['tmp_name'], 'img/' . $image);
         add($name, $image, $intro, $description, $number_date, $price, $category_id);
         echo "<script> window.location.href='index.php'</script>";
     }
@@ -49,7 +48,7 @@ function editTour()
         $number_date = $_POST['number_date'];
         $price = $_POST['price'];
         $category_id = $_POST['category_id'];
-        move_uploaded_file($file['tmp_name'], '../img/' . $image);
+        move_uploaded_file($file['tmp_name'], 'img/' . $image);
         edit($id, $name, $image, $intro, $description, $number_date, $price, $category_id);
         echo "<script> window.location.href='index.php'</script>";
     }
