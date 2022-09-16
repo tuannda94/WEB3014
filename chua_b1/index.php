@@ -13,7 +13,50 @@ switch($url) {
         echo indexTour();
         break;
     case 'create-tour':
-        // Gọi controller tìm đến hàm hiển thị view tạo mới tour
+        if(isset($_POST['AddTour'])){
+            $name = $_POST['name'];
+            $category_id = $_POST['category_id'];
+            $erros = [];
+            if(!preg_match('/^[A-Z]+[A-Za-z0-9\s-]+$/u', $name)){
+                $erros['name'] = 'Invalid tour name';
+            }
+            if(!preg_match('/^\d+$/', $category_id)){
+                $erros['category_id'] = 'Invalid tour category';
+            }
+            if(!array_filter($erros)){
+                insertTour($name, $category_id);
+                $message = 'More successful tours';
+            }
+        }
+        addTour();
+        break;
+    case 'delete-tour':
+        if(isset($_GET['id'])){
+            deleteTour($_GET['id']);
+        }
+        break;
+    case 'edit-tour':
+        if(isset($_GET['id'])){
+            editTour($_GET['id']);
+        }
+        break;
+    case 'update-tour' :
+        if(isset($_POST['updateTour'])){
+            $id = $_POST['id'];
+            $name = $_POST['name'];
+            $category_id = $_POST['category_id'];
+            $erros = [];
+            if(!preg_match('/^[A-Z]+[A-Za-z0-9\s-]+$/u', $name)){
+                $erros['name'] = 'Invalid tour name';
+            }
+            if(!preg_match('/^\d+$/', $category_id)){
+                $erros['category_id'] = 'Invalid tour category';
+            }
+            if(!array_filter($erros)){
+                updateTour($id,$name,$category_id);
+                $message = 'More successful tours';
+            }
+        }
         break;
     default:
         echo 'Đường dẫn không tồn tại';
