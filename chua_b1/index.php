@@ -14,6 +14,13 @@ switch($url) {
         break;
     case 'create-tour':
         // Gọi controller tìm đến hàm hiển thị view tạo mới tour
+        echo indexAddTour();
+        break;
+    case 'update-tour':
+        echo indexUpdTour();
+        break;
+    case 'del-tour':
+        echo indexDelTour();
         break;
     default:
         echo 'Đường dẫn không tồn tại';
