@@ -19,7 +19,7 @@ function deleTour($id)
 function add($name, $image, $intro, $description, $number_date, $price, $category_id)
 {
     $sql = "INSERT INTO tours( name, image, intro, description, number_date, price, category_id) VALUES ('$name','$image','$intro','$description','$number_date','$price','$category_id')";
-    return getData($sql, EXECUTE);
+    return getData($sql,0);
 }
 function edit($id, $name, $image, $intro, $description, $number_date, $price, $category_id)
 {

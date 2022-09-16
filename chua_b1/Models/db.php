@@ -30,8 +30,7 @@ function getData($sql, $fetchType)
             return $statement->fetchAll();
         case FETCH_ONE:
             return $statement->fetch();
-        case EXECUTE:
-            return $statement->execute();
+        
         default:
             return true;
     }

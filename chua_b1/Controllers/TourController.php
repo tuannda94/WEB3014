@@ -13,9 +13,7 @@ function indexTour()
 function addTour()
 {
     $cata = selectCata();
-    // B1. Lấy tất cả các bản ghi tours
     if (isset($_POST['add'])) {
-        $id = $_POST['id'];
         $name = $_POST['name'];
         $file = $_FILES['image'];
         $image = $file['name'];
@@ -28,7 +26,7 @@ function addTour()
         add($name, $image, $intro, $description, $number_date, $price, $category_id);
         echo "<script> window.location.href='index.php'</script>";
     }
-    include_once "Views/add.php";
+    include_once "./Views/add.php";
 }
 
 
@@ -52,7 +50,7 @@ function editTour()
         edit($id, $name, $image, $intro, $description, $number_date, $price, $category_id);
         echo "<script> window.location.href='index.php'</script>";
     }
-    include_once "Views/edit.php";
+    include_once "./Views/edit.php";
 }
 
 function deleteTour()
