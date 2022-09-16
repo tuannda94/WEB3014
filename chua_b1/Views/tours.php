@@ -44,7 +44,7 @@
                     <p>Number date: <?php
                                     echo $item['number_date'];
                                     ?></p>
-                    <a href="update.php?id=<?php echo $item['id'] ?>" class="btn btn-info">
+                    <a href="index.php?url=update-tour&id=<?php echo $item['id'] ?>" class="btn btn-info">
                         <i class='bx bx-cart-alt'></i>
                         Update
                     </a>
