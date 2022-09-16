@@ -18,6 +18,9 @@ switch ($url) {
     case 'update-tour':
         echo updateTour();
         break;
+    case 'delete-tour':
+        echo deleteTour1();
+        break;
     default:
         echo 'Đường dẫn không tồn tại';
         break;

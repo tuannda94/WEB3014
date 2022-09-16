@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <button type="button" class="btn btn-primary"><a class="btn-add" href="index.php?url=create-tour">Add</a></button>
+                <button type="button" class="btn btn-primary"><a style="color: #fff" class="btn-add" href="index.php?url=create-tour">Add</a></button>
 
             </div>
         </div>
@@ -49,7 +49,7 @@
                         Update
                     </a>
 
-                    <a href="delete.php?id=<?php echo $item['id'] ?>" class="btn btn-danger">
+                    <a href="index.php?url=delete-tour&id=<?php echo $item['id'] ?>" class="btn btn-danger">
                         <i class='bx bx-cart-alt'></i>
                         Delete
                     </a>

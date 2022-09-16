@@ -155,3 +155,12 @@ function updateTour()
     }
     include_once './Views/update.php';
 }
+
+function deleteTour1()
+{
+    if ($_GET['id']) {
+        $id = $_GET['id'];
+        deleteTour($id);
+        header("Location: index.php");
+    }
+}

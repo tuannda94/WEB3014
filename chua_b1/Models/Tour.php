@@ -35,4 +35,7 @@ function updateTour1($name, $nameImg, $intro, $description, $price, $number_date
     WHERE id=$id";
     pdo_execute($sql);
 };
-?>
+function deleteTour($id) {
+    $sql = "DELETE FROM tours where id=$id";
+    pdo_execute($sql);
+}
