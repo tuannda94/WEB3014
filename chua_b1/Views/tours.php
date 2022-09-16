@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <button type="button" class="btn btn-primary"><a class="btn-add" href="add.php">Add</a></button>
+                <button type="button" class="btn btn-primary"><a class="btn-add" href="index.php?url=create-tour">Add</a></button>
 
             </div>
         </div>

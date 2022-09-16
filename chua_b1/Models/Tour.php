@@ -11,3 +11,14 @@ function getTours()
 
     return getData($sql, FETCH_ALL);
 }
+
+function insertTour($name, $nameImg, $intro, $description, $price, $number_date, $category_id) {
+    $sql = "INSERT INTO tours (name, description, price, number_date, img, intro, category_id)
+                VALUES ('$name', '$description', '$price', '$number_date', '$nameImg', '$intro', '$category_id')";
+    pdo_execute($sql);
+};
+
+function getCategories() {
+    $sql = "SELECT * FROM categories";
+    return getData($sql, FETCH_ALL);
+}
