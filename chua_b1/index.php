@@ -14,6 +14,10 @@ switch($url) {
         break;
     case 'create-tour':
         // Gọi controller tìm đến hàm hiển thị view tạo mới tour
+        // include_once './Views/add_tour.php';
+        addTour();
+        break;
+    case 'edit-tour':
         break;
     default:
         echo 'Đường dẫn không tồn tại';
