@@ -11,5 +11,7 @@
             "email": "tuan.nguyenducanh@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "eftec/bladeone": "4.6"
+    }
 }

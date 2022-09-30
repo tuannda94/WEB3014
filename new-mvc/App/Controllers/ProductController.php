@@ -1,12 +1,19 @@
 <?php
 namespace App\Controllers;
-use App\Controllers\Controller;
+use App\Controllers\BaseController;
 use App\Models\Product;
 
-class ProductController extends Controller {
+class ProductController extends BaseController {
     public function getProducts() {
-        $product = new Product;
+        // Hiển thị danh sách sản phẩm bằng render() của BladeOne
+        // file view ở new-mvc/App/Views/product/index.blade.php
+        $viewName = 'product.index';
+        // data view cần biến $name và $price
+        $data = [
+            'name' => 'Iphone 14',
+            'price' => 12000000
+        ];
 
-        return $product->table; // products
+        return $this->render($viewName, $data);
     }
 }

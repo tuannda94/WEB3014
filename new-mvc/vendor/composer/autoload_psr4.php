@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Tuannda\\NewMvc\\' => array($baseDir . '/App'),
+    'eftec\\bladeone\\' => array($vendorDir . '/eftec/bladeone/lib'),
+    'App\\' => array($baseDir . '/App'),
 );
