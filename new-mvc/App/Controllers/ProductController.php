@@ -11,7 +11,13 @@ class ProductController extends BaseController {
         // data view cần biến $name và $price
         $data = [
             'name' => 'Iphone 14',
-            'price' => 12000000
+            'price' => 12000000,
+            'array' => [
+                'Xanh',
+                'Đỏ',
+                'Tím',
+                'Vàng'
+            ]
         ];
 
         return $this->render($viewName, $data);
