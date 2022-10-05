@@ -1,0 +1,174 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "92b10c6a27a686b10022516d72eaa0f1",
+    "packages": [
+        {
+            "name": "eftec/bladeone",
+            "version": "4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EFTEC/BladeOne.git",
+                "reference": "f13280910e65bcbc6c644eb5d3bfc085c269c7c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EFTEC/BladeOne/zipball/f13280910e65bcbc6c644eb5d3bfc085c269c7c4",
+                "reference": "f13280910e65bcbc6c644eb5d3bfc085c269c7c4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0"
+            },
+            "suggest": {
+                "eftec/bladeonehtml": "Extension to create forms",
+                "ext-mbstring": "This extension is used if it's active"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eftec\\bladeone\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jorge Patricio Castro Castillo",
+                    "email": "jcastro@eftec.cl"
+                }
+            ],
+            "description": "The standalone version Blade Template Engine from Laravel in a single php file",
+            "homepage": "https://github.com/EFTEC/BladeOne",
+            "keywords": [
+                "blade",
+                "php",
+                "template",
+                "templating",
+                "view"
+            ],
+            "support": {
+                "issues": "https://github.com/EFTEC/BladeOne/issues",
+                "source": "https://github.com/EFTEC/BladeOne/tree/4.6"
+            },
+            "time": "2022-08-26T21:45:02+00:00"
+        },
+        {
+            "name": "eftec/bladeonehtml",
+            "version": "2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EFTEC/BladeOneHtml.git",
+                "reference": "96af536509cbc43b3dbd282d2b5b07a3eff11ece"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EFTEC/BladeOneHtml/zipball/96af536509cbc43b3dbd282d2b5b07a3eff11ece",
+                "reference": "96af536509cbc43b3dbd282d2b5b07a3eff11ece",
+                "shasum": ""
+            },
+            "require": {
+                "eftec/bladeone": "^4.4",
+                "eftec/messagecontainer": "^2.1",
+                "ext-json": "*",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5.11"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eftec\\bladeonehtml\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jorge Patricio Castro Castillo",
+                    "email": "jcastro@eftec.cl"
+                }
+            ],
+            "description": "The standalone version Blade Template Engine from Laravel in a single php file",
+            "homepage": "https://github.com/EFTEC/BladeOneHtml",
+            "keywords": [
+                "blade",
+                "php",
+                "template",
+                "templating",
+                "view"
+            ],
+            "support": {
+                "issues": "https://github.com/EFTEC/BladeOneHtml/issues",
+                "source": "https://github.com/EFTEC/BladeOneHtml/tree/2.3"
+            },
+            "time": "2022-06-28T20:16:15+00:00"
+        },
+        {
+            "name": "eftec/messagecontainer",
+            "version": "2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EFTEC/MessageContainer.git",
+                "reference": "1e7210a8f7243adb600c9775bfb3c1c159e26d73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EFTEC/MessageContainer/zipball/1e7210a8f7243adb600c9775bfb3c1c159e26d73",
+                "reference": "1e7210a8f7243adb600c9775bfb3c1c159e26d73",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eftec\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jorge Castro",
+                    "email": "jcastro@eftec.cl"
+                }
+            ],
+            "description": "MessageContainer is a simple a minimalist message-system where messages (strings) could be stored in a tree-like structure",
+            "homepage": "https://github.com/EFTEC/MessageContainer",
+            "support": {
+                "issues": "https://github.com/EFTEC/MessageContainer/issues",
+                "source": "https://github.com/EFTEC/MessageContainer/tree/2.5"
+            },
+            "time": "2022-03-22T14:45:36+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

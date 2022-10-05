@@ -1,0 +1,16 @@
+<?php $_shouldextend[2]=1; ?>
+
+<?php $this->startSection('body'); ?>
+ <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+ <?php echo $this->runChild('layouts.navbar-main'); ?>
+ <!-- End Navbar -->
+ <div class="container-fluid py-4">
+ <?php echo $this->yieldContent('statistics'); ?>
+ <?php echo $this->yieldContent('content'); ?>
+ <?php echo $this->yieldContent('footer'); ?>
+ <?php echo $this->yieldContent('fixed'); ?>
+ </div>
+ </main>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[2])) { echo $this->runChild('layouts.master'); } ?>
