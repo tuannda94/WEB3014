@@ -6,6 +6,7 @@
 @section('title', 'Danh sách sản phẩm')
 
 <!-- yield(tên) ~ section(tên) nội dung endsection -->
+@section('content-title', 'ABC')
 @section('content')
 
 THƯ VIỆN BLADE ONE PHP2

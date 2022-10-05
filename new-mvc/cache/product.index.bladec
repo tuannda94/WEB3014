@@ -2,7 +2,11 @@
 <?php $_shouldextend[1]=1; ?>
 
 <!-- Truyền giá trị cho những phần thay đổi -->
+<!-- yield(tên)  ~ section(tên, giá trị) -->
+<?php $this->startSection('title', 'Danh sách sản phẩm'); ?>
+
 <!-- yield(tên) ~ section(tên) nội dung endsection -->
+<?php $this->startSection('content-title', 'ABC'); ?>
 <?php $this->startSection('content'); ?>
 
 THƯ VIỆN BLADE ONE PHP2
@@ -31,9 +35,5 @@ THƯ VIỆN BLADE ONE PHP2
 </ul>
 
 <?php $this->stopSection(); ?>
-
-<!-- yield(tên)  ~ section(tên, giá trị) -->
-<?php $this->startSection('title', 'Danh sách sản phẩm'); ?>
-
 
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.master'); } ?>
