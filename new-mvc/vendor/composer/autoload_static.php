@@ -11,6 +11,10 @@ class ComposerStaticInitf8d0e3489c6ac81dc76c89dde4666c7a
         array (
             'eftec\\bladeone\\' => 15,
         ),
+        'P' => 
+        array (
+            'Phroute\\Phroute\\' => 16,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -21,6 +25,10 @@ class ComposerStaticInitf8d0e3489c6ac81dc76c89dde4666c7a
         'eftec\\bladeone\\' => 
         array (
             0 => __DIR__ . '/..' . '/eftec/bladeone/lib',
+        ),
+        'Phroute\\Phroute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phroute/phroute/src/Phroute',
         ),
         'App\\' => 
         array (
