@@ -2,7 +2,7 @@
     "name": "dell/web3014",
     "autoload": {
         "psr-4": {
-            "app\\": "app/",
+            "App\\": "App/",
             "eftec\\": "vendor/eftec/"
         }
     },
@@ -13,6 +13,8 @@
         }
     ],
     "require": {
-        "eftec/bladeonehtml": "^2.3"
+        "eftec/bladeonehtml": "^2.3",
+        "almasaeed2010/adminlte": "~3.2",
+        "phroute/phroute": "^2.2"
     }
 }

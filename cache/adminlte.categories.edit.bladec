@@ -1,0 +1,34 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title', 'Thêm danh mục'); ?>
+
+<?php $this->startSection('content-title', 'Thêm danh mục'); ?>
+
+<?php $this->startSection('content'); ?>
+ <div class="row mb-2">
+ <div class="col-12">
+ <div class="card card-primary">
+ <form action="" method="POST">
+ <input type='hidden' name='<?php  echo '_token'; ?>' value='<?php echo $this->csrf_token; ?>'/>
+ <div class="card-body">
+ <div class="form-group">
+ <label for="inputName">Tên danh mục</label>
+ <input name="name" type="text" class="form-control" id="inputName"
+ placeholder="Tên danh mục" value="Quần lót">
+ </div>
+ <div class="form-group">
+ <label for="exampleFormControlSelect1">Trạng thái</label>
+ <select class="form-control" id="exampleFormControlSelect1">
+ <option selected>Ok luôn</option>
+ </select>
+ </div>
+ <div class="card-footer">
+ <button type="submit" class="btn btn-primary">Submit</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('adminlte.layouts.master'); } ?>

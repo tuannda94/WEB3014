@@ -7,11 +7,11 @@
 <?php $this->stopSection(); ?>
 
 <?php $this->startSection('content'); ?>
- <h1>abc</h1>
+ <?php echo $this->runChild('admin.includes.subcontent-main.statistics'); ?>
 <?php $this->stopSection(); ?>
 
 <?php $this->startSection('footer'); ?>
- <?php echo $this->runChild('admin.includes.subcontent-main.main-footer'); ?>
+ <?php echo $this->runChild('admin.includes.subcontent-main.main-content'); ?>
 <?php $this->stopSection(); ?>
 
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('admin.layouts.page'); } ?>

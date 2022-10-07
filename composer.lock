@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92b10c6a27a686b10022516d72eaa0f1",
+    "content-hash": "a4fabadf615af8774aba44610934d4a1",
     "packages": [
+        {
+            "name": "almasaeed2010/adminlte",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ColorlibHQ/AdminLTE.git",
+                "reference": "bd4d9c72931f1dd28601b6bfb387554a381ad540"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ColorlibHQ/AdminLTE/zipball/bd4d9c72931f1dd28601b6bfb387554a381ad540",
+                "reference": "bd4d9c72931f1dd28601b6bfb387554a381ad540",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Colorlib"
+                }
+            ],
+            "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 4",
+            "homepage": "https://adminlte.io/",
+            "keywords": [
+                "JS",
+                "admin",
+                "back-end",
+                "css",
+                "less",
+                "responsive",
+                "template",
+                "theme",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/ColorlibHQ/AdminLTE/issues",
+                "source": "https://github.com/ColorlibHQ/AdminLTE/tree/v3.2.0"
+            },
+            "time": "2022-02-07T20:33:09+00:00"
+        },
         {
             "name": "eftec/bladeone",
             "version": "4.6",
@@ -160,6 +203,54 @@
                 "source": "https://github.com/EFTEC/MessageContainer/tree/2.5"
             },
             "time": "2022-03-22T14:45:36+00:00"
+        },
+        {
+            "name": "phroute/phroute",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrjgreen/phroute.git",
+                "reference": "c1893b885966a0c7b50b9239dd867fda7a312dfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrjgreen/phroute/zipball/c1893b885966a0c7b50b9239dd867fda7a312dfa",
+                "reference": "c1893b885966a0c7b50b9239dd867fda7a312dfa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phroute\\Phroute\\": "src/Phroute"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Green",
+                    "email": "joe.green.0991@gmail.com"
+                }
+            ],
+            "description": "Fast, fully featured restful request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/mrjgreen/phroute/issues",
+                "source": "https://github.com/mrjgreen/phroute/tree/v2.2.0"
+            },
+            "time": "2022-05-04T16:22:33+00:00"
         }
     ],
     "packages-dev": [],

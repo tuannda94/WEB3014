@@ -1,6 +1,6 @@
 <?php
-namespace app\Controllers;
-use app\Controllers\Controller;
+namespace App\Controllers;
+use App\Controllers\Controller;
 
 class User extends Controller{
 
