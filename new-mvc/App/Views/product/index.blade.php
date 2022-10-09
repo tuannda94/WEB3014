@@ -25,8 +25,11 @@ THƯ VIỆN BLADE ONE PHP2
 @endif
 
 <ul>
-    @foreach ($array as $item)
-        <li>{{$item}}</li>
+    @foreach ($products as $product)
+        <li>{{$product->id}}</li>
+        <li>{{$product->name}}</li>
+        <li>{{$product->price}}</li>
+        <li>{{$product->status}}</li>
     @endforeach
 </ul>
 

@@ -13,6 +13,8 @@
     ],
     "require": {
         "eftec/bladeone": "4.6",
-        "phroute/phroute": "2.2"
+        "phroute/phroute": "2.2",
+        "illuminate/database": "9.34",
+        "illuminate/events": "9.34"
     }
 }

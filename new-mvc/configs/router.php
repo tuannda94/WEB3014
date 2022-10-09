@@ -14,6 +14,7 @@ $router->get('/', function () {
 
 // $router->phuong_thuc('duong dan', [Controller, 'ten ham']);
 $router->get('/ds-san-pham', [ProductController::class, 'getProducts']);
+$router->get('/chi-tiet-san-pham/{id}', [ProductController::class, 'getProduct']);
 
 # NB. You can cache the return value from $router->getData() so you don't have to create the routes each request - massive speed gains
 $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());

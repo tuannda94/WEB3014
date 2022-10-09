@@ -17,8 +17,13 @@ class ProductController extends BaseController {
                 'Đỏ',
                 'Tím',
                 'Vàng'
-            ]
+            ],
+            'products' => Product::all() // lấy ra tất cả các bản ghi dưới dạng 1 collection
         ];
+
+        // var_dump($data);
+        // // return $data;
+        // die;
 
         return $this->render($viewName, $data);
     }

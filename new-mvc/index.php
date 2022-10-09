@@ -8,7 +8,11 @@ const BASE_URL = 'http://localhost/web3014/wE17202/new-mvc/';
 
 // Thay bằng require nhiều thì require autoload để nó làm tự đông
 require_once './vendor/autoload.php';
+// Database sẽ phải được require trước router
+require_once './configs/database.php';
+// Tránh việc router hiển thị dữ liệu khi chưa kết nối
 require_once './configs/router.php';
+
 // use App\Controllers\ProductController;
 
 // $pc = new ProductController();
