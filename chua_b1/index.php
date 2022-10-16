@@ -15,6 +15,13 @@ switch($url) {
     case 'create-tour':
         // Gọi controller tìm đến hàm hiển thị view tạo mới tour
         break;
+
+
+    case 'admin':
+        break;
+
+    case 'admin-product':
+        break;
     default:
         echo 'Đường dẫn không tồn tại';
         break;
