@@ -1,0 +1,23 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title', 'Chỉnh sửa sản phẩm'); ?>
+
+<?php $this->startSection('content-title', 'Chỉnh sửa sản phẩm'); ?>
+
+<?php $this->startSection('content'); ?>
+ <form action="<?php echo \htmlentities(BASE_URL??'', ENT_QUOTES, 'UTF-8', false); ?>products/update/<?php echo \htmlentities($product->id??'', ENT_QUOTES, 'UTF-8', false); ?>" method="post">
+ <div>
+ <input name="name" type="text" placeholder="Tên SP" value="<?php echo \htmlentities($product->name??'', ENT_QUOTES, 'UTF-8', false); ?>">
+ </div>
+ <div>
+ <input name="price" type="text" placeholder="Giá SP" value="<?php echo \htmlentities($product->price??'', ENT_QUOTES, 'UTF-8', false); ?>">
+ </div>
+ <div>
+ <input type="radio" name="status" value="1" <?php echo \htmlentities($product->status == 1 ? 'checked' : ''??'', ENT_QUOTES, 'UTF-8', false); ?>> Kích hoạt
+ <input type="radio" name="status" value="0" <?php echo \htmlentities($product->status == 0 ? 'checked' : ''??'', ENT_QUOTES, 'UTF-8', false); ?>> K Kích hoạt
+ </div>
+ <div><button>Chỉnh sửa</button></div>
+ </form>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.master'); } ?>

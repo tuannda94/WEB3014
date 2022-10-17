@@ -6,31 +6,37 @@
 @section('title', 'Danh sách sản phẩm')
 
 <!-- yield(tên) ~ section(tên) nội dung endsection -->
-@section('content-title', 'ABC')
+@section('content-title', "Danh sách sản phẩm ($count)" )
 @section('content')
-
-THƯ VIỆN BLADE ONE PHP2
-<!-- <?php echo $name ?> -->
-<!-- <?php echo $price ?> -->
-
-<!-- Với blade -->
-{{$name}}
-{{ strlen($name) > 2 ? "Do dai lon hon 2" : "Do dai nho hon 2" }}
-
-{{$price}}
-@if ($price > 10000000)
-    <p>Lon hon 10tr</p>
-@else
-    <p>Nho hon 10 tr</p>
-@endif
-
-<ul>
-    @foreach ($products as $product)
-        <li>{{$product->id}}</li>
-        <li>{{$product->name}}</li>
-        <li>{{$product->price}}</li>
-        <li>{{$product->status}}</li>
-    @endforeach
-</ul>
+    <a href="{{BASE_URL}}products/create">
+        <button class="btn btn-primary">Tạo mới</button>
+    </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên SP</th>
+                <th>Giá SP</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($products as $product)
+            <tr>
+                <td>{{ $product->id }}</td>
+                <td>{{ $product->name }}</td>
+                <td>{{ $product->price }} VND</td>
+                <td>
+                    <a href="{{BASE_URL}}products/edit/{{$product->id}}">
+                        <button>Sửa</button>
+                    </a>
+                    <a href="{{BASE_URL}}products/delete/{{$product->id}}">
+                        <button onclick="return confirm('Bạn có muốn xoá không?');">xoá</button>
+                    </a>
+            </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 
 @endsection

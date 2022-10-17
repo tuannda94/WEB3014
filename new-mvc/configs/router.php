@@ -13,8 +13,15 @@ $router->get('/', function () {
 });
 
 // $router->phuong_thuc('duong dan', [Controller, 'ten ham']);
-$router->get('/ds-san-pham', [ProductController::class, 'getProducts']);
-$router->get('/chi-tiet-san-pham/{id}', [ProductController::class, 'getProduct']);
+// $router->get('/ds-san-pham', [ProductController::class, 'getProducts']);
+// $router->get('/chi-tiet-san-pham/{id}', [ProductController::class, 'getProduct']);
+$router->get('/products', [ProductController::class, 'index']);
+$router->get('/products/create', [ProductController::class, 'create']);
+$router->post('/products/store', [ProductController::class, 'store']);
+$router->get('/products/edit/{id}', [ProductController::class, 'edit']);
+$router->post('/products/update/{id}', [ProductController::class, 'update']);
+$router->get('/products/delete/{id}', [ProductController::class, 'destroy']);
+// index(), create(), store(), show(), edit(), update(), destroy()
 
 # NB. You can cache the return value from $router->getData() so you don't have to create the routes each request - massive speed gains
 $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());
