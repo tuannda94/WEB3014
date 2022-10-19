@@ -3,6 +3,7 @@
 // Sử dụng thư viện Phroute
 use Phroute\Phroute\RouteCollector;
 use App\Controllers\ProductController;
+use App\Controllers\UserController;
 // Khởi tạo đối tượng quản lý danh sách cách đường dẫn
 $router = new RouteCollector();
 // phương thức: get, post, put, patch, delete, any
@@ -22,6 +23,21 @@ $router->get('/products/edit/{id}', [ProductController::class, 'edit']);
 $router->post('/products/update/{id}', [ProductController::class, 'update']);
 $router->get('/products/delete/{id}', [ProductController::class, 'destroy']);
 // index(), create(), store(), show(), edit(), update(), destroy()
+// $router->get('/users', [UserController::class, 'index']);
+// $router->get('/users/create', [UserController::class, 'create']);
+// $router->post('/users/store', [UserController::class, 'store']);
+// $router->get('/users/edit/{id}', [UserController::class, 'edit']);
+// $router->post('/users/update/{id}', [UserController::class, 'update']);
+// $router->get('/users/delete/{id}', [UserController::class, 'destroy']);
+
+$router->group(['prefix' => 'users'], function ($router) {
+    $router->get('/', [UserController::class, 'index']);
+    $router->get('create', [UserController::class, 'create']);
+    $router->post('store', [UserController::class, 'store']);
+    $router->get('edit/{id}', [UserController::class, 'edit']);
+    $router->post('update/{id}', [UserController::class, 'update']);
+    $router->get('delete/{id}', [UserController::class, 'destroy']);
+});
 
 # NB. You can cache the return value from $router->getData() so you don't have to create the routes each request - massive speed gains
 $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());

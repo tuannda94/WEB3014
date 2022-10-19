@@ -1,8 +1,8 @@
 <?php
 namespace App\Models;
-// Để sử dụng BaseModel ở đây cần use vào
-use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends BaseModel {
-
+class User extends Model {
+    protected $table = 'users';
+    public $timestamps = false;
 }
