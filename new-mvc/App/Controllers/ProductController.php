@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Controllers\BaseController;
+use App\Models\Category;
 use App\Models\Product;
 
 class ProductController extends BaseController {
@@ -31,11 +32,26 @@ class ProductController extends BaseController {
     // GET: Hàm hiển thị danh sách
     public function index()
     {
+        // 1. Đã xác định 1 đối tượng có id đầy đủ -> lấy ra các bản ghi của quan hệ
+        // $product = Product::find(5);
+        // var_dump($product->category);die;
+        // $category = Category::find(2);
+        // var_dump($category->products);die;
+
+        // 2. Khi đang lấy ra danh sách mà muốn lấy kèm thông tin của quan hệ
+        // $products = Product::with('category')->get(); // with tên quan hệ để lấy ra bản ghi của quan hệ theo khoá ngoại
+        // Sau khi lấy xong thì từng bản ghi sẽ có thuộc tính là category
+        // hiển thị tên danh mục: $product->category->name
+        // echo '<pre>';
+        // var_dump($products);die;
+
+
         // Controller sẽ tương tác với Model, Model sẽ tương tác với DB để lấy dữ liệu trả cho Controller
         // $products = Product::all(); // lấy ra tất cả các bản ghi
 
         // $products = Product::paginate(1); // lấy ra 10 bản ghi trên 1 trang
-        $products = Product::select('id', 'name', 'price')->where('id', '>', 0)->get(); // lấy ra các bản ghi theo điều kiện
+        $products = Product::select('id', 'name', 'price', 'category_id')->where('id', '>', 0)->with('category')->get(); // lấy ra các bản ghi theo điều kiện
+        // var_dump($products);
         $count = Product::count(); // đếm số bản ghi trong DB
         // Controller có dữ liệu rồi thì đưa dữ liệu đó cho view để hiển thị ra
         // compact sẽ gói các biến lại thành 1 mảng gồm key là tên biến và value là giá trị của biến đó

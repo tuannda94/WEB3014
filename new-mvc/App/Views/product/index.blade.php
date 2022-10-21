@@ -17,6 +17,7 @@
                 <th>ID</th>
                 <th>Tên SP</th>
                 <th>Giá SP</th>
+                <th>DM</th>
                 <th></th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                 <td>{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->price }} VND</td>
+                <td>{{ $product->category->name }}</td>
                 <td>
                     <a href="{{BASE_URL}}products/edit/{{$product->id}}">
                         <button>Sửa</button>
