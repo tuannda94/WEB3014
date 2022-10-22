@@ -1,0 +1,20 @@
+{
+    "name": "tuannda/new-mvc",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nguyen Duc Anh Tuan",
+            "email": "tuan.nguyenducanh@gmail.com"
+        }
+    ],
+    "require": {
+        "eftec/bladeone": "4.6",
+        "phroute/phroute": "2.2",
+        "illuminate/database": "8.83.25",
+        "illuminate/events": "8.83.25"
+    }
+}
