@@ -1,21 +1,35 @@
 <?php
-require_once 'Controllers/TourController.php';
+    require_once 'Controllers/TourController.php';
+    $url =isset($_GET['url'])?$_GET['url']: '/';
+    $id=isset($_GET['id'])?$_GET['id']:''; 
+    switch($url){
+        case '/':
+            indexTour();
+            break;
+        case 'addTour':
+            add();
+            break;
+        case 'update':
+            update($id);
+            break;
+        case 'delete':
+            delete($id);
+            break;
+        default:
+            echo 'đường dẫn không tồn tại';
+            break;
 
-// http://localhost?ten_bien=giatri&ten_bien2=giatri2
-// http://localhost?url=create_tour
-// B1. Lấy thông tin đường dẫn muốn truy cập vào ở thanh địa chỉ
-$url = isset($_GET['url']) ? $_GET['url'] : '/';
-// B2. Kiểm tra xem người dùng đang muốn vào đâu
-// Chức năng giống như điều hành đến các controller khác nhau
-switch($url) {
-    case '/':
-        // Gọi controller TourController
-        echo indexTour();
-        break;
-    case 'create-tour':
-        // Gọi controller tìm đến hàm hiển thị view tạo mới tour
-        break;
-    default:
-        echo 'Đường dẫn không tồn tại';
-        break;
-}
+    }
+    // $data=[
+    //     'name'=>'hoang',
+    //     'age'=>19,
+    //     'address'=>'HN'
+    // ];
+    // $str="";
+    // foreach($data as $fieldName =>$value){
+    //     echo $str.="$fieldName='$value',";
+    //     echo "<br>";
+    // }
+    // echo rtrim($str,',');
+
+?>
