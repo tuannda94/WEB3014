@@ -31,3 +31,17 @@ function getData($sql, $fetchType) {
             return true;
     }
 }
+function postData($sql, $fetchType) {
+    $conn = getConnect();
+    $statement = $conn->prepare($sql);
+    $statement->execute();
+
+    switch($fetchType) {
+        case FETCH_ALL:
+            return $statement->fetchAll();
+        case FETCH_ONE:
+            return $statement->fetch();
+        default:
+            return true;
+    }
+}

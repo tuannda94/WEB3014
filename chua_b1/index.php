@@ -7,13 +7,22 @@ require_once 'Controllers/TourController.php';
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
 // B2. Kiểm tra xem người dùng đang muốn vào đâu
 // Chức năng giống như điều hành đến các controller khác nhau
-switch($url) {
+switch ($url) {
     case '/':
         // Gọi controller TourController
         echo indexTour();
         break;
     case 'create-tour':
         // Gọi controller tìm đến hàm hiển thị view tạo mới tour
+        break;
+    case 'add':
+        echo addTour();
+        break;
+    case 'change':
+        echo changeTour();
+        break;
+    case 'delete':
+        echo delete();
         break;
     default:
         echo 'Đường dẫn không tồn tại';

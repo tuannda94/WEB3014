@@ -16,6 +16,9 @@ echo '</pre>';
                 <td><?= $tour['id'] ?></td>
                 <td><?= $tour['name'] ?></td>
                 <td><?= $tour['cate_name'] ?></td>
+                <td><a href="add">Thêm</a></td>
+                <td><a href="change">Sửa</a></td>
+                <td><a href="delete">Xóa</a></td>
             </tr>
         <?php endforeach ?>
     </tbody>
