@@ -1,14 +1,12 @@
-<?php
-// Đã có biến $tours từ controller trước khi include view này
-echo '<pre>';
-var_dump($tours);
-echo '</pre>';
-?>
+
 <table>
     <thead>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Category</td>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th colspan="2"><a href="index.php?url=create-tour">Add tour</a></th>
+        </tr>
     </thead>
     <tbody>
         <?php foreach ($tours as $key => $tour): ?>
@@ -16,6 +14,8 @@ echo '</pre>';
                 <td><?= $tour['id'] ?></td>
                 <td><?= $tour['name'] ?></td>
                 <td><?= $tour['cate_name'] ?></td>
+                <td><a href="index.php?url=edit-tour&id=<?= $tour['id'] ?>">Edit</a></td>
+                <td><a href="index.php?url=delete-tour&id=<?= $tour['id'] ?>">Delete</a></td>
             </tr>
         <?php endforeach ?>
     </tbody>
