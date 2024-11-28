@@ -5,13 +5,10 @@ define('FETCH_ONE', 1);
 define('NOT_FETCH', 0);
 
 function getConnect() {
-    $connect = new PDO(
-        'mysql:host=127.0.0.1;dbname=PHP2_WE17202',
-        'root',
-        ''
-    );
-
-    return $connect;
+    $conn = new PDO("mysql:host=localhost:3366; dbname=php2_lab1",'root','');
+    $conn ->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    
+    return $conn;
 }
 // 1. Viết truy vấn $sql = 'SELECT * FROM tours;
 // 2. Chuẩn bị truy vấn $statement = $connect->prepare($sql);
@@ -30,4 +27,10 @@ function getData($sql, $fetchType) {
         default:
             return true;
     }
+}
+//Hàm thực hiện thêm mới, sửa, xóa
+function executeDB($sql){
+    $conn = getConnect();
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
 }
